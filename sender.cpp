@@ -11,7 +11,6 @@ int main() {
                 boost::asio::ip::address::from_string(ip), port);
         boost::asio::io_service io_service;
 
-        // Acceptor-а нет -- мы отправляем
         boost::asio::ip::tcp::socket socket(io_service, endpoint.protocol());
         socket.connect(endpoint);
 
